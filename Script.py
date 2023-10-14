@@ -1,9 +1,7 @@
 class script(object):
     START_TXT = """👋🏻 Hᴇʟʟᴏ {}.
 𝖨𝗆 𝖺𝗇 𝖺𝗎𝗍𝗈 𝖿𝗂𝗅𝗍𝖾𝗋 𝖻𝗈𝗍 𝗐𝗁𝗂𝖼𝗁 𝖼𝖺𝗇 𝗉𝗋𝗈𝗏𝗂𝖽𝖾 𝗆𝗈𝗏𝗂𝖾𝗌 𝗂𝗇 𝗒𝗈𝗎𝗋 𝗀𝗋𝗈𝗎𝗉𝗌. 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 𝖺𝗇𝖽 𝗉𝗋𝗈𝗆𝗈𝗍𝖾 𝗆𝖾 𝖺𝗌 𝖺𝖽𝗆𝗂𝗇 𝗍𝗈 𝗅𝖾𝗍 𝗆𝖾 𝗀𝖾𝗍 𝗂𝗇 𝖺𝖼𝗍𝗂𝗈𝗇.
-𝖢𝗅𝗂𝖼𝗄 𝗈𝗇 𝗍𝗁𝖾 𝖧𝖾𝗅𝗉 𝖻𝗎𝗍𝗍𝗈𝗇 𝖿𝗈𝗋 𝖬𝗈𝗋𝖾...
-
-©️ Maintained By @im_goutham_josh"""
+𝖢𝗅𝗂𝖼𝗄 𝗈𝗇 𝗍𝗁𝖾 𝖧𝖾𝗅𝗉 𝖻𝗎𝗍𝗍𝗈𝗇 𝖿𝗈𝗋 𝖬𝗈𝗋𝖾..."""
     HELP_TXT = """
     🙋🏻‍♂️   Hellooo  {} 🤓
 
@@ -20,17 +18,12 @@ class script(object):
 
 ○ Dont Spam Me...🙂
 """
-    ABOUT_TXT = """<b>◎ Nᴀᴍᴇ: ᴋᴜᴛᴛᴜ ʙᴏᴛ™
-◎ Cʀᴇᴀᴛᴏʀ: <a href=https://t.me/wudixh13>Goutham SER</a>
+    ABOUT_TXT = """<b>◎ Nᴀᴍᴇ: The Happy Hour
+◎ Cʀᴇᴀᴛᴏʀ: <a href=https://t.me/Master_Jiraya>🄼𝗮𝘀𝘁𝗲𝗿 𝗝𝗶𝗿𝗮𝘆𝗮</a>
 ◎ Lᴀɴɢᴜᴀɢᴇ: Pʏᴛʜᴏɴ 3
 ◎ Dᴀᴛᴀ Bᴀsᴇ: Mᴏɴɢᴏ DB
-◎ Bᴏᴛ Sᴇʀᴠᴇʀ: KoYeb</b>"""
-    SOURCE_TXT = """<b>NOTE:</b>
-- ᴋᴜᴛᴛᴜ ʙᴏᴛ™ is a open source project. 
-- Source - <ahref=https://github.com/GouthamSER>Click Here😂</a>
-
-<b>DEVS:</b>
-- <a href=https://t.me/wudixh1>Gᴏᴜᴛʜᴀᴍ Sᴇʀ🌈</a>"""
+◎ Bᴏᴛ Sᴇʀᴠᴇʀ: Free Wala</b>"""
+    SOURCE_TXT = """Nai Milega....😁😁"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
 <b>NOTE:</b>
