@@ -36,6 +36,21 @@ async def give_filter(client, message):
     if k == False:
         await auto_filter(client, message)
 
+@Client.on_message(filters.private & filters.text & filters.incoming)
+async def pm_text(bot, message):
+    content = message.text
+    user = message.from_user.first_name
+    user_id = message.from_user.id
+    if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
+    if user_id in ADMINS: return # ignore admins
+    await message.reply_text(
+         text=f"<b>ʜᴇʏ {user} 🥱 \n\nअगर आपको मूवी चाइए तो ग्रुप का ᴜꜱᴇ करना होगा....\n\nपर्सनल में मूवी नई मिलेगा....😒\n\n\nAny Problem - @Master_Jiraya_Bot</b>",   
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ 📝", url=f"https://t.me/Happy_Hour_Friends")]])
+    )
+    await bot.send_message(
+        chat_id=LOG_CHANNEL,
+        text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>\n\ntg://openmessage?user_id={user_id}"
+    )
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
@@ -64,7 +79,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"➪[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", callback_data=f'files#{file.file_id}'
+                    text=f"➪ [{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -634,7 +649,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"➪[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"➪ [{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
