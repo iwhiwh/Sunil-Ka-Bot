@@ -20,7 +20,7 @@
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
-"value":"6530719134:AAFn8s4CA1z4Gfd6r9DE3fiQUn5T1CjGLp4",
+"value":"6488653342:AAHnho92aBq3gXs8eyKHwo_pzx5lL8MbjRY",
             "required": true
         },
         "API_ID": {
@@ -69,12 +69,12 @@
         },
         "DATABASE_NAME": {
             "description": "Name of the database in mongoDB.",
-"value":"kuutuuBot",
+"value":"PMBOT",
             "required": false
         },
         "COLLECTION_NAME": {
             "description": "Name of the collections. Defaults to Telegram_files. If you are using the same database, then use different collection name for each bot",
-            "value": "Anurag_files",
+            "value": "Telegram_files",
             "required": false
         }
     },
