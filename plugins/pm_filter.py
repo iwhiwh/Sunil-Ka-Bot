@@ -44,8 +44,7 @@ async def pm_text(bot, message):
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
-         text=f"<b>ʜᴇʏ {user} 🥱 \n\nअगर आपको मूवी चाइए तो ग्रुप का ᴜꜱᴇ करना होगा....\n\nपर्सनल में मूवी नई मिलेगा....😒\n\n\nAny Problem - @Master_Jiraya_Bot</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ 📝", url=f"https://t.me/Happy_Hour_Friends")]])
+         text=f"<b>Type and get - @Happy_Hour_Friends</b>",   
     )
     await bot.send_message(
         chat_id=LOG_CHANNEL,
@@ -63,7 +62,7 @@ async def next_page(bot, query):
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("ɴᴇᴇʏ ɪᴘᴏ ᴇɴᴛᴇ ᴘᴀᴢʜᴀʏᴀ ᴍᴇssᴀɢᴇ ᴀɴᴜ ᴜsᴇ ᴄʜʏᴀɴᴇ☠, \nɴᴇᴇʏ ᴏɴᴜᴅᴇ ᴀʏᴋ🤺.", show_alert=True)
+        await query.answer("This Massage Is Old...🙂\n\nType New Massage.....✅", show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -135,7 +134,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("ɴᴇʏ sʜᴏᴏᴘᴀʀᴀᴅᴀ👌\nɪᴛʜ ɴɪɴᴀᴋ ᴏʟᴀᴛʜᴀʟᴀ⚔️", show_alert=True)
+        return await query.answer("This is Not For You....!", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
@@ -379,7 +378,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('✅ मूवी फाइल पर्सनल में भेजा है.... ✅ [Chack PM]', show_alert=True)
+                await query.answer('मूवी फाइल पर्सनल में भेजा है...🙂\n\n✅ File Sending Process Successfully ✅', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
