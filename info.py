@@ -21,9 +21,6 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/7c98ec193af3f012304e8.jpg')).split()
 
-#Auto Delete Fill In Seconds 
-IMDB_DLT_TIME = int(environ.get('DLT_TIME', 600))
-
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1991522624').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001867538832').split()]
@@ -45,7 +42,7 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Happy_Hour_Friends')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', 'False')), False)
 IMDB = is_enabled((environ.get('IMDB', 'False')), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', 'True')), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b><a href=https://t.me/The_Happy_Hour_Hindi>{file_name}</a></b>")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b><a href=https://t.me/Happy_Hour_Friends>{file_name}</a></b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b><a href=https://t.me/Happy_Hour_Friends>{file_name}</a></b>")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🍿 Title: <a href={url}>{title}</a>\n🎃 Genres: {genres}\n📅 Year: <a href={url}/releaseinfo>{year}</a>\n⭐ Rating: <a href={url}/ratings>{rating}</a> / 10\n🔉 Audio: हिंदी + English")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
