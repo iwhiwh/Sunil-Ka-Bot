@@ -729,9 +729,13 @@ async def auto_filter(client, msg, spoll=False):
             await jk.delete()
         except Exception as e:
             logger.exception(e)
-            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            jeetu = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(DLT_TIME)
+            await jeetu.delete()
     else:
-        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        jkk = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(DLT_TIME)
+        await jkk.delete()
     if spoll:
         await msg.message.delete()
 
